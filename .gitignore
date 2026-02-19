@@ -1,0 +1,91 @@
+# ============================================
+# Optimal .gitignore for C/C++ projects
+# ============================================
+
+# ---------- System files ----------
+# macOS
+.DS_Store
+
+# ---------- Compiled files ----------
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+*.so
+*.so.*
+*.dylib
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+a.out
+test
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# ---------- Testing and coverage ----------
+# Coverage reports
+*.gcda
+*.gcno
+*.gcov
+coverage/
+gcov_report/
+tests/test
+
+# ---------- IDEs and editors ----------
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------- Build directories ----------
+# Build directories
+build/
+dist/
+bin/
+obj/
+
+# ---------- Logs and temporary files ----------
+*.log
+tmp/
+temp/

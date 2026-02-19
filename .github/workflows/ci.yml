@@ -1,0 +1,60 @@
+name: Decimal CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc make check pkg-config
+
+    - name: Build library
+      run: |
+        cd src
+        echo "=== Building s21_decimal.a ==="
+        make s21_decimal.a
+        ls -la *.a
+
+    - name: Run tests
+      run: |
+        cd src
+        echo "=== Running tests ==="
+        make test
+        echo "=== Tests completed ==="
+
+    - name: Generate coverage report
+      run: |
+        cd src
+        echo "=== Generating coverage report ==="
+        make gcov_report || echo "Coverage report generation skipped"
+
+  build-macos:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Check tools
+      run: |
+        gcc --version
+        make --version
+        which pkg-config || echo "pkg-config not installed"
+
+    - name: Build on macOS
+      run: |
+        cd src
+        echo "=== Building on macOS ==="
+        make s21_decimal.a
+        ls -la *.a
