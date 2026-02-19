@@ -4,7 +4,7 @@
 ![School21](https://img.shields.io/badge/School21-000000?style=for-the-badge)
 ![Decimal](https://img.shields.io/badge/decimal-arithmetic-blue?style=for-the-badge)
 ![Precision](https://img.shields.io/badge/precision-financial-green?style=for-the-badge)
-![CI](https://github.com/abakar-dev/s21-decimal/workflows/CI/badge.svg)
+![CI](https://github.com/abakar-dev/s21-decimal/actions/workflows/ci.yml/badge.svg)
 ![Tests](https://img.shields.io/badge/tests-80%25%20coverage-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-lightgrey?style=for-the-badge)
